@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="913.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kursach.controllers.newHealthAppController">
+    <children>
+        <ImageView fx:id="logo" fitHeight="80.0" fitWidth="91.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../resource/logo.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="enterButton" layoutX="34.0" layoutY="796.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="588.0" style="-fx-background-color: #8bb7fc;" text="Оставить заявку">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Label fx:id="supportText" layoutX="34.0" layoutY="848.0" prefHeight="45.0" prefWidth="588.0" text="С вопросами и пожеланиями по функционированию приложения обращаться по адресу: sergeifilinovich01@mail.ru" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelNameCompany" layoutX="124.0" layoutY="30.0" text="   ">
+            <font>
+                <Font name="Kurale" size="30.0" />
+            </font>
+        </Label>
+        <Button fx:id="cancelButton" layoutX="518.0" layoutY="23.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #8bb7fc;" text="Отмена">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Label fx:id="labelError" layoutX="34.0" layoutY="726.0" prefHeight="63.0" prefWidth="588.0" textFill="#f82121">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <RadioButton fx:id="feeRadio1" layoutX="400.0" layoutY="569.0" mnemonicParsing="false" selected="true" text="единовременно" />
+        <RadioButton fx:id="feeRadio2" layoutX="534.0" layoutY="569.0" mnemonicParsing="false" text="поэтапно" />
+        <Label layoutX="34.0" layoutY="562.0" text="Страховой взнос будет уплачен: ">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="nalRadio" layoutX="34.0" layoutY="612.0" mnemonicParsing="false" selected="true" text="Наличными денежными средства" />
+        <RadioButton fx:id="beznalRadio2" layoutX="265.0" layoutY="612.0" mnemonicParsing="false" text="Банковской картой" />
+        <CheckBox fx:id="checkDoljn" layoutX="34.0" layoutY="657.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="588.0" text="Являюсь иностранным публичным должностным лицом, должностным лицом публичных международных организаций, лицом, занимающим должность, включенную в определяемый Президентом Республики Беларусь перечень государственных должностей Республики Беларусь, членом их семьи и приближенных к ним лиц" wrapText="true" />
+        <Label alignment="CENTER" layoutX="32.0" layoutY="94.0" prefHeight="31.0" prefWidth="603.0" text="Заявление о заключении договора страхования здоровья" wrapText="true">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="33.0" layoutY="524.0" text="Срок договора">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <TextField fx:id="termField" layoutX="286.0" layoutY="527.0" prefHeight="25.0" prefWidth="348.0" promptText="1" />
+        <CheckBox fx:id="covidCheck" layoutX="33.0" layoutY="329.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="603.0" text="причинение вреда здоровью при временной утрате трудоспособности в результате коронавирусной инфекции COVID-19, установленной в периоод действия страхования в учреждениях здравоохранения" wrapText="true">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </CheckBox>
+        <CheckBox fx:id="harmHappendCheck" layoutX="33.0" layoutY="167.0" mnemonicParsing="false" text="причинение вреда здоровью в результате несчастного случая">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </CheckBox>
+        <CheckBox fx:id="healthHappendCheck" layoutX="33.0" layoutY="202.0" mnemonicParsing="false" text="причинение вреда жизни в результате несчастного случая">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </CheckBox>
+      <CheckBox fx:id="invaidHappendCheck" layoutX="33.0" layoutY="230.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="603.0" text="причинение вреда здоровью в результате несчастного случая (получение инвалидности)" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="deathIllCheck" layoutX="33.0" layoutY="285.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="603.0" text="причинение вреда жизни в результате болезни (смерть в результате впервые выявленной болезни)" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <Label layoutX="97.0" layoutY="132.0" text="Прошу заключить договор страхования от следующие рисков:">
+         <font>
+            <Font name="Kurale" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="104.0" layoutY="409.0" text="Некоторые необходимые данные для заключения договора:">
+         <font>
+            <Font name="Kurale" size="16.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="sportCheck" layoutX="35.0" layoutY="446.0" mnemonicParsing="false" text="профессионально занимаюсь спортом">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="relaxCheck" layoutX="375.0" layoutY="446.0" mnemonicParsing="false" text="предпочитаю активный отдых">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="invalid12Check" layoutX="186.0" layoutY="479.0" mnemonicParsing="false" text="являюсь инвалидом I, II группы">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+    </children>
+</AnchorPane>

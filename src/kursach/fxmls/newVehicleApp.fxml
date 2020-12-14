@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="950.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kursach.controllers.newVehicleAppController">
+    <children>
+        <ImageView fx:id="logo" fitHeight="80.0" fitWidth="91.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../resource/logo.png" />
+            </image>
+        </ImageView>
+        <Label fx:id="powerEngineLabel" layoutX="33.0" layoutY="371.0" text="Мощность двигателя, л.с.">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="numbAccidentLabel" layoutX="33.0" layoutY="401.0" text="Количество ДТП">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="enterButton" layoutX="34.0" layoutY="839.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="588.0" style="-fx-background-color: #8bb7fc;" text="Оставить заявку">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Label fx:id="supportText" layoutX="34.0" layoutY="891.0" prefHeight="45.0" prefWidth="588.0" text="С вопросами и пожеланиями по функционированию приложения обращаться по адресу: sergeifilinovich01@mail.ru" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="liftingLabel" layoutX="33.0" layoutY="311.0" text="Грузоподъемность, т">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="numbSeatsLabel" layoutX="33.0" layoutY="341.0" text="Число посадочных мест">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelNameCompany" layoutX="124.0" layoutY="30.0" text="   ">
+            <font>
+                <Font name="Kurale" size="30.0" />
+            </font>
+        </Label>
+        <Button fx:id="cancelButton" layoutX="518.0" layoutY="23.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #8bb7fc;" text="Отмена">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Label fx:id="labelError" layoutX="34.0" layoutY="769.0" prefHeight="63.0" prefWidth="588.0" textFill="#f82121">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+      <Label fx:id="pleaseEnterLabel" layoutX="33.0" layoutY="125.0" text="Заполните пожалуйста следующие поля:" />
+      <Label fx:id="modelLabel" layoutX="33.0" layoutY="160.0" text="Модель транспорта">
+         <font>
+            <Font name="Kurale" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="regNumbLabel" layoutX="33.0" layoutY="190.0" text="Регистрационный номер">
+         <font>
+            <Font name="Kurale" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="bodyNumbLabel" layoutX="33.0" layoutY="250.0" text="Номер кузова (шасси)">
+         <font>
+            <Font name="Kurale" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="vEngineLabel" layoutX="33.0" layoutY="280.0" text="Рабочий объём двигателя">
+         <font>
+            <Font name="Kurale" size="20.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="checkElectric" layoutX="35.0" layoutY="441.0" mnemonicParsing="false" text="т/с является электромобилем" />
+      <Label fx:id="batteryLabel" layoutX="35.0" layoutY="475.0" text="Емкость батареи, кВт*ч">
+         <font>
+            <Font name="Kurale" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="yearLabel" layoutX="33.0" layoutY="220.0" text="Год выпуска">
+         <font>
+            <Font name="Kurale" size="20.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="feeRadio1" layoutX="400.0" layoutY="612.0" mnemonicParsing="false" selected="true" text="единовременно" />
+      <RadioButton fx:id="feeRadio2" layoutX="534.0" layoutY="612.0" mnemonicParsing="false" text="поэтапно" />
+      <Label fx:id="feeLabel" layoutX="34.0" layoutY="605.0" text="Страховой взнос будет уплачен: ">
+         <font>
+            <Font name="Kurale" size="20.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="nalRadio" layoutX="34.0" layoutY="655.0" mnemonicParsing="false" selected="true" text="Наличными денежными средства" />
+      <RadioButton fx:id="beznalRadio2" layoutX="265.0" layoutY="655.0" mnemonicParsing="false" text="Банковской картой" />
+      <CheckBox fx:id="checkDoljn" layoutX="34.0" layoutY="700.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="588.0" text="Являюсь иностранным публичным должностным лицом, должностным лицом публичных международных организаций, лицом, занимающим должность, включенную в определяемый Президентом Республики Беларусь перечень государственных должностей Республики Беларусь, членом их семьи и приближенных к ним лиц" wrapText="true" />
+      <TextField fx:id="modelField" layoutX="282.0" layoutY="163.0" prefHeight="25.0" prefWidth="348.0" promptText="Модель" />
+      <TextField fx:id="regNumbField" layoutX="282.0" layoutY="193.0" prefHeight="25.0" prefWidth="348.0" promptText="1234AA-7" />
+      <TextField fx:id="yeadField" layoutX="282.0" layoutY="223.0" prefHeight="25.0" prefWidth="348.0" promptText="2020" />
+      <TextField fx:id="bodyNumbField" layoutX="282.0" layoutY="253.0" prefHeight="25.0" prefWidth="348.0" promptText="123456" />
+      <TextField fx:id="vEngineField" layoutX="282.0" layoutY="283.0" prefHeight="25.0" prefWidth="348.0" promptText="2.0" />
+      <TextField fx:id="liftingField" layoutX="282.0" layoutY="314.0" prefHeight="25.0" prefWidth="348.0" promptText="1.5" />
+      <TextField fx:id="numbSeatsField" layoutX="282.0" layoutY="344.0" prefHeight="25.0" prefWidth="348.0" promptText="4" />
+      <TextField fx:id="powerEngineField" layoutX="282.0" layoutY="374.0" prefHeight="25.0" prefWidth="348.0" promptText="300" />
+      <TextField fx:id="numbAccidentField" layoutX="282.0" layoutY="404.0" prefHeight="25.0" prefWidth="348.0" promptText="0" />
+      <TextField fx:id="batteryField" layoutX="284.0" layoutY="478.0" prefHeight="25.0" prefWidth="348.0" />
+        <Label fx:id="namePageLabel" alignment="CENTER" layoutX="32.0" layoutY="94.0" prefHeight="31.0" prefWidth="603.0" text="Заявление о заключении договора страхования транспортного средства" wrapText="true">
+            <font>
+                <Font name="Kurale" size="18.0" />
+            </font>
+        </Label>
+      <Label fx:id="termLabel" layoutX="33.0" layoutY="567.0" text="Срок договора">
+         <font>
+            <Font name="Kurale" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="termField" layoutX="286.0" layoutY="570.0" prefHeight="25.0" prefWidth="348.0" promptText="1" />
+      <Label fx:id="expLabel" layoutX="33.0" layoutY="536.0" text="Стаж вождения">
+         <font>
+            <Font name="Kurale" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="expField" layoutX="286.0" layoutY="539.0" prefHeight="25.0" prefWidth="348.0" promptText="1" />
+    </children>
+</AnchorPane>

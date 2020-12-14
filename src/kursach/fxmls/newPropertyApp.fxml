@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="865.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kursach.controllers.newPropertyAppController">
+    <children>
+        <ImageView fx:id="logo" fitHeight="80.0" fitWidth="91.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../resource/logo.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="enterButton" layoutX="34.0" layoutY="753.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="588.0" style="-fx-background-color: #8bb7fc;" text="Оставить заявку">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Label fx:id="supportText" layoutX="34.0" layoutY="805.0" prefHeight="45.0" prefWidth="588.0" text="С вопросами и пожеланиями по функционированию приложения обращаться по адресу: sergeifilinovich01@mail.ru" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="33.0" layoutY="311.0" text="Количество входов">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelNameCompany" layoutX="124.0" layoutY="30.0" text="   ">
+            <font>
+                <Font name="Kurale" size="30.0" />
+            </font>
+        </Label>
+        <Button fx:id="cancelButton" layoutX="518.0" layoutY="23.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #8bb7fc;" text="Отмена">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Label fx:id="labelError" layoutX="34.0" layoutY="683.0" prefHeight="63.0" prefWidth="588.0" textFill="#f82121">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <Label layoutX="33.0" layoutY="125.0" text="Заполните пожалуйста следующие поля:" />
+        <Label layoutX="33.0" layoutY="160.0" text="Адрес">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="33.0" layoutY="190.0" text="Площадь (кв.м)">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="33.0" layoutY="250.0" text="Год постройки">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="33.0" layoutY="280.0" text="Этаж">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="33.0" layoutY="220.0" text="Количество комнат">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="feeRadio1" layoutX="400.0" layoutY="526.0" mnemonicParsing="false" selected="true" text="единовременно" />
+        <RadioButton fx:id="feeRadio2" layoutX="534.0" layoutY="526.0" mnemonicParsing="false" text="поэтапно" />
+        <Label layoutX="34.0" layoutY="519.0" text="Страховой взнос будет уплачен: ">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="nalRadio" layoutX="34.0" layoutY="569.0" mnemonicParsing="false" selected="true" text="Наличными денежными средства" />
+        <RadioButton fx:id="beznalRadio2" layoutX="265.0" layoutY="569.0" mnemonicParsing="false" text="Банковской картой" />
+        <CheckBox fx:id="checkDoljn" layoutX="34.0" layoutY="614.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="588.0" text="Являюсь иностранным публичным должностным лицом, должностным лицом публичных международных организаций, лицом, занимающим должность, включенную в определяемый Президентом Республики Беларусь перечень государственных должностей Республики Беларусь, членом их семьи и приближенных к ним лиц" wrapText="true" />
+        <TextField fx:id="adressField" layoutX="282.0" layoutY="163.0" prefHeight="25.0" prefWidth="348.0" promptText="ул. *******, д. ***, кв. ***" />
+        <TextField fx:id="areaField" layoutX="282.0" layoutY="193.0" prefHeight="25.0" prefWidth="348.0" promptText="50" />
+        <TextField fx:id="roomsField" layoutX="282.0" layoutY="223.0" prefHeight="25.0" prefWidth="348.0" promptText="2" />
+        <TextField fx:id="yearField" layoutX="282.0" layoutY="253.0" prefHeight="25.0" prefWidth="348.0" promptText="2000" />
+        <TextField fx:id="floorField" layoutX="282.0" layoutY="283.0" prefHeight="25.0" prefWidth="348.0" promptText="2" />
+        <TextField fx:id="doorsField" layoutX="282.0" layoutY="314.0" prefHeight="25.0" prefWidth="348.0" promptText="1" />
+        <Label alignment="CENTER" layoutX="32.0" layoutY="94.0" prefHeight="31.0" prefWidth="603.0" text="Заявление о заключении договора страхования недвижимости" wrapText="true">
+            <font>
+                <Font name="Kurale" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="33.0" layoutY="481.0" text="Срок договора">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <TextField fx:id="termField" layoutX="286.0" layoutY="484.0" prefHeight="25.0" prefWidth="348.0" promptText="1" />
+      <CheckBox fx:id="steelDoorCheck" layoutX="33.0" layoutY="355.0" mnemonicParsing="false" text="Металлическая дверь">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="codelockCheck" layoutX="33.0" layoutY="395.0" mnemonicParsing="false" text="Кодовый замок">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="unfireSystemCheck" layoutX="33.0" layoutY="435.0" mnemonicParsing="false" text="Противопожарная система">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="securityCheck" layoutX="282.0" layoutY="355.0" mnemonicParsing="false" text="Охранная сигнализация">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="unfireMaterialCheck" layoutX="282.0" layoutY="395.0" mnemonicParsing="false" text="Огнеупорные стройматериалы">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="highRiskCheck" layoutX="282.0" layoutY="435.0" mnemonicParsing="false" text="Зона повышенного риска">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+    </children>
+</AnchorPane>

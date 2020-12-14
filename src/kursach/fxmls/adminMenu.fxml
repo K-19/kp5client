@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="743.0" prefWidth="983.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kursach.controllers.adminMenuController">
+    <children>
+        <Label fx:id="labelUserName" alignment="CENTER_RIGHT" layoutX="406.0" layoutY="18.0" prefHeight="48.0" prefWidth="449.0" text="username">
+            <font>
+                <Font name="Kurale" size="30.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="logo" fitHeight="94.0" fitWidth="99.0" layoutX="40.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+        <Label fx:id="supportText" layoutX="15.0" layoutY="698.0" prefHeight="45.0" prefWidth="943.0" text="С вопросами и пожеланиями по функционированию приложения обращаться по адресу: sergeifilinovich01@mail.ru" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="exitButton" layoutX="882.0" layoutY="23.0" mnemonicParsing="false" text="Выйти">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+      <Button fx:id="usersButton" layoutX="40.0" layoutY="130.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="242.0" style="-fx-background-color: #ffa02c;" text="Пользователи">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="contrctsButton" layoutX="40.0" layoutY="230.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="242.0" style="-fx-background-color: #ffa02c;" text="Договора">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="infoButton" layoutX="40.0" layoutY="284.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="242.0" style="-fx-background-color: #ffa02c;" text="Информация">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="newAdminButton" layoutX="40.0" layoutY="334.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="242.0" style="-fx-background-color: #ffa02c;" text="Добавить администратора">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="applicationsButton" layoutX="40.0" layoutY="178.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="242.0" style="-fx-background-color: #ffa02c;" text="Заявления">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="messagesButton" layoutX="40.0" layoutY="384.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="242.0" style="-fx-background-color: #ffa02c;" text="Сообщения пользователей">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+        <Label fx:id="labelNameCompany" layoutX="156.0" layoutY="23.0" prefHeight="48.0" prefWidth="312.0">
+            <font>
+                <Font name="Kurale" size="36.0" />
+            </font>
+        </Label>
+      <Label layoutX="311.0" layoutY="77.0" text="Панель администратора">
+         <font>
+            <Font name="Kurale" size="28.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="usersPane" layoutX="312.0" layoutY="130.0" prefHeight="568.0" prefWidth="636.0" visible="false">
+         <children>
+            <TableView fx:id="tableUsers" layoutY="48.0" prefHeight="520.0" prefWidth="636.0">
+              <columns>
+                <TableColumn fx:id="usersColumnId" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="usersColumnPasport" prefWidth="75.0" text="Номер паспорта" />
+                  <TableColumn fx:id="usersColumnIdPasport" prefWidth="75.0" text="Идентификационный номер паспорта" />
+                  <TableColumn fx:id="usersColumnPhone" prefWidth="75.0" text="Телефон" />
+                  <TableColumn fx:id="usersColumnEmail" prefWidth="75.0" text="Email" />
+                  <TableColumn fx:id="usersColumnBirth" prefWidth="75.0" text="Дата рождения" />
+                  <TableColumn fx:id="usersColumnRegDay" prefWidth="75.0" text="Дата регистрации" />
+                  <TableColumn fx:id="usersColumnAdmin" prefWidth="75.0" text="Администратор" />
+                  <TableColumn fx:id="usersColumnLogin" prefWidth="75.0" text="Логин" />
+                  <TableColumn fx:id="usersColumnName" prefWidth="75.0" text="Имя" />
+                  <TableColumn fx:id="usersColumnLastname" prefWidth="75.0" text="Фамилия" />
+              </columns>
+            </TableView>
+            <Button fx:id="editInfoUserButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="242.0" style="-fx-background-color: #ffa02c;" text="Редактировать данные">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteUserButton" layoutX="394.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="242.0" style="-fx-background-color: #ffa02c;" text="Удалить пользователя">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <TextField fx:id="idUserField" layoutX="253.0" layoutY="1.0" prefHeight="37.0" prefWidth="130.0" promptText="Введите ID" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="appPane" layoutX="312.0" layoutY="130.0" prefHeight="568.0" prefWidth="636.0" visible="false">
+         <children>
+            <Button fx:id="startRedactButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="636.0" style="-fx-background-color: #ffa02c;" text="Начать редактирование заявления">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <TableView fx:id="applicationsTable" layoutY="51.0" prefHeight="520.0" prefWidth="636.0">
+              <columns>
+                  <TableColumn fx:id="AppidColumn" prefWidth="71.0" text="№" />
+                  <TableColumn fx:id="ApptypeColumn" prefWidth="160.0" text="Тип" />
+                  <TableColumn fx:id="AppobjectName" prefWidth="236.0" text="Объект страхования" />
+                  <TableColumn fx:id="AppobjectNumber" prefWidth="163.0" text="Номер объекта" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="contractsPane" layoutX="312.0" layoutY="130.0" prefHeight="568.0" prefWidth="636.0" visible="false">
+         <children>
+            <Button fx:id="openContractButton" layoutX="249.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="255.0" style="-fx-background-color: #ffa02c;" text="Открыть договор">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <TextField fx:id="numbContractField" layoutX="-2.0" prefHeight="37.0" prefWidth="235.0" promptText="Номер договора">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TableView fx:id="contractsTable" layoutX="-2.0" layoutY="149.0" prefHeight="421.0" prefWidth="636.0">
+              <columns>
+                  <TableColumn fx:id="ContrIdColumn" prefWidth="71.0" text="№" />
+                  <TableColumn fx:id="ContrTypeColumn" prefWidth="160.0" text="Тип" />
+                  <TableColumn fx:id="ContrObjectName" prefWidth="236.0" text="Объект страхования" />
+                  <TableColumn fx:id="ContrObjectNumber" minWidth="0.0" prefWidth="165.0" text="Номер объекта" />
+                  <TableColumn fx:id="ContrSum" prefWidth="161.0" text="Сумма выплаты" />
+                  <TableColumn fx:id="ContrPerMonth" prefWidth="163.0" text="Ежемесячный платёж" />
+              </columns>
+            </TableView>
+            <Button fx:id="deleteContractButton" layoutX="518.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="118.0" style="-fx-background-color: #ffa02c;" text="Удалить">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="filterButton" layoutX="596.0" layoutY="46.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="40.0" style="-fx-background-color: #ffa02c;" text="...">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <TextField fx:id="iDotField" layoutX="-2.0" layoutY="46.0" prefHeight="37.0" prefWidth="76.0" promptText="От">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="iDdoField" layoutX="78.0" layoutY="46.0" prefHeight="37.0" prefWidth="76.0" promptText="До">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="sumOtField" layoutX="316.0" layoutY="46.0" prefHeight="37.0" prefWidth="62.0" promptText="От">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="sumDoField" layoutX="384.0" layoutY="46.0" prefHeight="37.0" prefWidth="62.0" promptText="До">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="perOtField" layoutX="460.0" layoutY="46.0" prefHeight="37.0" prefWidth="62.0" promptText="От">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="perDoField" layoutX="528.0" layoutY="46.0" prefHeight="31.0" prefWidth="62.0" promptText="До">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Label fx:id="filter2Label" layoutX="338.0" layoutY="83.0" text="Сумма договора" />
+            <Label fx:id="filter3Label" layoutX="482.0" layoutY="83.0" text="Плата в месяц" />
+            <Label fx:id="filter1Label" layoutX="28.0" layoutY="83.0" text="Номер договора" />
+            <Button fx:id="loadContractsButton" layoutY="106.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="636.0" style="-fx-background-color: #ffa02c;" text="Загрузить список контрактов">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <ChoiceBox fx:id="contractCombo" layoutX="158.0" layoutY="46.0" prefHeight="37.0" prefWidth="150.0">
+             <items>
+                 <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Все" />
+                     <String fx:value="Автомобиль" />
+                     <String fx:value="Недвижимость" />
+                     <String fx:value="Здоровье" />
+                 </FXCollections>
+             </items>
+            </ChoiceBox>
+         </children>
+      </AnchorPane>
+      <Label fx:id="loadingLabel" layoutX="855.0" layoutY="88.0" prefHeight="17.0" prefWidth="99.0" text="Загрузка...">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="supportPane" layoutX="307.0" layoutY="128.0" prefHeight="536.0" prefWidth="652.0" visible="false">
+         <children>
+            <Button fx:id="answerTheQuestionButton" layoutX="6.0" layoutY="2.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="636.0" style="-fx-background-color: #ffa02c;" text="Ответить на сообщение">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <TableView fx:id="questionsTable" layoutX="6.0" layoutY="51.0" prefHeight="520.0" prefWidth="636.0">
+              <columns>
+                <TableColumn fx:id="questIdUserColumn" editable="false" prefWidth="105.0" text="ID пользователя" />
+                <TableColumn fx:id="questTextColumn" editable="false" prefWidth="529.0" text="Сообщение" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="aboutButton" layoutX="40.0" layoutY="434.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="242.0" style="-fx-background-color: #ffa02c;" text="О компании">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="vakansiiButton" layoutX="40.0" layoutY="484.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="242.0" style="-fx-background-color: #ffa02c;" text="Вакансии">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="ContactsButton" layoutX="40.0" layoutY="534.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="242.0" style="-fx-background-color: #ffa02c;" text="Контакты">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="aboutPane" layoutX="305.0" layoutY="124.0" prefHeight="568.0" prefWidth="652.0" visible="false">
+         <children>
+            <TextArea fx:id="aboutTextArea" layoutX="1.0" layoutY="52.0" prefHeight="520.0" prefWidth="652.0" wrapText="true" />
+            <Button fx:id="confirmAbout" layoutX="206.0" layoutY="9.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" style="-fx-background-color: #ffa02c;" text="Сохранить">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="vakansiiPane" layoutX="307.0" layoutY="123.0" prefHeight="568.0" prefWidth="652.0" visible="false">
+         <children>
+            <Button fx:id="confirmVakansii" layoutX="204.0" layoutY="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" style="-fx-background-color: #ffa02c;" text="Сохранить">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="vakansiiTextArea" layoutX="-1.0" layoutY="52.0" prefHeight="520.0" prefWidth="652.0" wrapText="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="contactsPane" layoutX="306.0" layoutY="127.0" prefHeight="568.0" prefWidth="652.0" visible="false">
+         <children>
+            <TextArea fx:id="contactsTextArea" layoutY="48.0" prefHeight="520.0" prefWidth="652.0" wrapText="true" />
+            <Button fx:id="confirmContacts" layoutX="205.0" layoutY="6.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" style="-fx-background-color: #ffa02c;" text="Сохранить ">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

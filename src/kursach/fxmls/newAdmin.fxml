@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kursach.controllers.NewAdminController">
+    <children>
+        <Label fx:id="labelRegistration" layoutX="125.0" layoutY="54.0" text="Новый Администратор">
+            <font>
+                <Font name="Kurale" size="26.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="logo" fitHeight="80.0" fitWidth="91.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+        <Label fx:id="labelLogin" layoutX="39.0" layoutY="228.0" text="Логин">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelPassword" layoutX="39.0" layoutY="258.0" text="Пароль">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <PasswordField fx:id="passwordField" layoutX="326.0" layoutY="261.0" prefHeight="25.0" prefWidth="298.0" promptText="pass" />
+        <Button fx:id="registrButton" layoutX="31.0" layoutY="484.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="588.0" style="-fx-background-color: #ffa02c;" text="Подтвердить">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Label fx:id="supportText" layoutX="25.0" layoutY="538.0" prefHeight="45.0" prefWidth="603.0" text="С вопросами и пожеланиями по функционированию приложения обращаться по адресу: sergeifilinovich01@mail.ru" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="loginField" layoutX="326.0" layoutY="231.0" prefHeight="25.0" prefWidth="298.0" promptText="login" />
+        <Label fx:id="labelCheckPassword" layoutX="39.0" layoutY="288.0" text="Повторите пароль">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelEmail" layoutX="39.0" layoutY="318.0" text="Email">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelTelephone" layoutX="39.0" layoutY="348.0" text="Телефон">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelBirthday" layoutX="39.0" layoutY="378.0" text="Дата рождения">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <PasswordField fx:id="checkPasswordField" layoutX="326.0" layoutY="291.0" prefHeight="25.0" prefWidth="298.0" promptText="pass" />
+        <TextField fx:id="emailField" layoutX="326.0" layoutY="321.0" prefHeight="25.0" prefWidth="298.0" promptText="example.mail@mail.ru" />
+        <TextField fx:id="telField" layoutX="325.0" layoutY="351.0" prefHeight="25.0" prefWidth="298.0" promptText="375123456789" />
+        <DatePicker fx:id="birthdayField" layoutX="325.0" layoutY="381.0" prefHeight="25.0" prefWidth="298.0" promptText="01.01.1970" />
+        <Label fx:id="passportNLabel" layoutX="39.0" layoutY="168.0" text="Номер пасспорта">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="iDPassLabel" layoutX="39.0" layoutY="198.0" text="Идентификационный номер">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <TextField fx:id="passportNField" layoutX="326.0" layoutY="171.0" prefHeight="25.0" prefWidth="298.0" promptText="AA1234567" />
+        <TextField fx:id="iDPassField" layoutX="326.0" layoutY="201.0" prefHeight="25.0" prefWidth="298.0" promptText="1234567A123AB1" />
+        <Label fx:id="labelRegistration1" layoutX="124.0" layoutY="14.0" text="   ">
+            <font>
+                <Font name="Kurale" size="30.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelNameCompany" layoutX="124.0" layoutY="14.0" text="   ">
+            <font>
+                <Font name="Kurale" size="30.0" />
+            </font>
+        </Label>
+        <Button fx:id="cancelButton" layoutX="518.0" layoutY="23.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #ffa02c;" text="Отмена">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Label fx:id="labelError" layoutX="39.0" layoutY="415.0" prefHeight="63.0" prefWidth="588.0" textFill="#f82121">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <Label fx:id="lastnameLabel" layoutX="39.0" layoutY="138.0" text="Фамилия">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="nameLabel" layoutX="39.0" layoutY="108.0" text="Имя">
+            <font>
+                <Font name="Kurale" size="20.0" />
+            </font>
+        </Label>
+        <TextField fx:id="lastnameField" layoutX="326.0" layoutY="141.0" prefHeight="25.0" prefWidth="298.0" promptText="Иванов" />
+        <TextField fx:id="nameField" layoutX="325.0" layoutY="111.0" prefHeight="25.0" prefWidth="298.0" promptText="Иван" />
+    </children>
+</AnchorPane>

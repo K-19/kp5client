@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="983.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kursach.controllers.MainMenuController">
+    <children>
+        <Label fx:id="labelUserName" layoutX="553.0" layoutY="30.0" text="username">
+            <font>
+                <Font name="Kurale" size="30.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="logo" fitHeight="80.0" fitWidth="91.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+        <Label fx:id="supportText" layoutX="14.0" layoutY="545.0" prefHeight="45.0" prefWidth="943.0" text="С вопросами и пожеланиями по функционированию приложения обращаться по адресу: sergeifilinovich01@mail.ru" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+      <Button fx:id="licCabinetButton" layoutX="704.0" layoutY="35.0" mnemonicParsing="false" text="Личный кабинет">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="exitButton" layoutX="881.0" layoutY="35.0" mnemonicParsing="false" text="Выйти">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="licCabinetLabel" layoutX="320.0" layoutY="120.0" text="Личный кабинет" visible="false">
+         <font>
+            <Font name="Kurale" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="strahLabel" layoutX="320.0" layoutY="175.0" text="Заявления" visible="false">
+         <font>
+            <Font name="Kurale" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="contractsLabels" layoutX="320.0" layoutY="220.0" text="Договоры" visible="false">
+         <font>
+            <Font name="Kurale" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="personalDataLabel" layoutX="320.0" layoutY="265.0" text="Персональные данные" visible="false">
+         <font>
+            <Font name="Kurale" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelNameCompany" layoutX="113.0" layoutY="14.0" prefHeight="80.0" prefWidth="354.0">
+         <font>
+            <Font name="Kurale" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="fixFacesButton" layoutX="25.0" layoutY="119.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="216.0" text="Новое заявление">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="aboutButton" layoutX="25.0" layoutY="176.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="216.0" text="О компании">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="contactsButton" layoutX="25.0" layoutY="213.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="216.0" text="Контактная информация">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="communicateButton" layoutX="25.0" layoutY="252.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="216.0" text="Сотрудничество">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="pressButton" layoutX="25.0" layoutY="291.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="216.0" text="Пресс-центр">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="calculatorButton" layoutX="24.0" layoutY="508.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="216.0" text="Калькулятор страхования">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="dataPane" layoutX="320.0" layoutY="310.0" prefHeight="237.0" prefWidth="619.0" visible="false">
+         <children>
+            <Label fx:id="nPassLabel" layoutY="100.0" text="Номер паспорта">
+               <font>
+                  <Font name="Kurale" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="iDNPasLabel" layoutY="25.0" text="Идентификационный номер">
+               <font>
+                  <Font name="Kurale" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="phoneLabel" layoutY="50.0" text="Номер телефона">
+               <font>
+                  <Font name="Kurale" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="emailLabel" layoutY="75.0" text="Электронная почта">
+               <font>
+                  <Font name="Kurale" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="birthdayLabel" layoutY="125.0" text="Дата рождения">
+               <font>
+                  <Font name="Kurale" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="regDayLabel" layoutY="150.0" text="Дата регистрации">
+               <font>
+                  <Font name="Kurale" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="loginLabel" text="Логин" AnchorPane.leftAnchor="0.0">
+               <font>
+                  <Font name="Kurale" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="loginLabelSet" layoutX="248.0" layoutY="1.0" text="default">
+               <font>
+                  <Font name="Kurale" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="iDNPasLabelSet" layoutX="248.0" layoutY="25.0" text="default">
+               <font>
+                  <Font name="Kurale" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="phoneLabelSet" layoutX="248.0" layoutY="50.0" text="default">
+               <font>
+                  <Font name="Kurale" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="emailLabelSet" layoutX="248.0" layoutY="75.0" text="default">
+               <font>
+                  <Font name="Kurale" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="nPassLabelSet" layoutX="248.0" layoutY="100.0" text="default">
+               <font>
+                  <Font name="Kurale" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="birthdayLabelSet" layoutX="248.0" layoutY="125.0" text="default">
+               <font>
+                  <Font name="Kurale" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="regDayLabelSet" layoutX="248.0" layoutY="150.0" text="default">
+               <font>
+                  <Font name="Kurale" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="dogovorsPane" layoutX="320.0" layoutY="265.0" prefHeight="269.0" prefWidth="619.0" visible="false">
+         <children>
+            <TableView fx:id="dogovorsTabl" prefHeight="269.0" prefWidth="619.0">
+              <columns>
+                  <TableColumn fx:id="ContrIdColumn" prefWidth="71.0" text="№" />
+                  <TableColumn fx:id="ContrTypeColumn" prefWidth="160.0" text="Тип" />
+                  <TableColumn fx:id="ContrObjectName" prefWidth="236.0" text="Объект страхования" />
+                  <TableColumn fx:id="ContrObjectNumber" prefWidth="163.0" text="Номер объекта" />
+                  <TableColumn fx:id="ContrSum" prefWidth="163.0" text="Сумма выплаты" />
+                  <TableColumn fx:id="ContrPerMonth" prefWidth="163.0" text="Ежемесячный платёж" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+      <AnchorPane fx:id="strahPane" layoutX="320.0" layoutY="220.0" prefHeight="320.0" prefWidth="619.0" visible="false">
+         <children>
+             <TableView fx:id="tableApplications" layoutX="-7.0" prefHeight="321.0" prefWidth="631.0">
+                  <columns>
+                      <!-- Колонки таблицы -->
+                     <TableColumn fx:id="idColumn" prefWidth="71.0" text="№" />
+                     <TableColumn fx:id="typeColumn" prefWidth="160.0" text="Тип" />
+                     <TableColumn fx:id="objectName" prefWidth="236.0" text="Объект страхования" />
+                     <TableColumn fx:id="objectNumber" prefWidth="163.0" text="Номер объекта" />
+                 </columns>
+             </TableView>
+         </children></AnchorPane>
+      <AnchorPane fx:id="fizFacesPane" layoutX="260.0" layoutY="120.0" prefHeight="420.0" prefWidth="696.0">
+         <children>
+            <ImageView fx:id="imgHouse" fitHeight="109.0" fitWidth="109.0" layoutX="92.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="92.0">
+               <image>
+                  <Image url="@../resource/house.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgCar" fitHeight="150.0" fitWidth="200.0" layoutX="294.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/car.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgHealth" fitHeight="109.0" fitWidth="113.0" layoutX="521.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="66.0">
+               <image>
+                  <Image url="@../resource/health.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="appHouseButton" layoutX="61.0" layoutY="150.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="170.0" text="Составить заявление">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="appCarButton" layoutX="284.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="170.0" text="Составить заявление">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="appHealthButton" layoutX="490.0" layoutY="150.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="170.0" text="Составить заявление" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="healthInfoButton" layoutX="490.0" layoutY="185.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="170.0" text="Информация">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="carInfoButton" layoutX="284.0" layoutY="185.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="170.0" text="Информация">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="houseInfoButton" layoutX="61.0" layoutY="185.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="170.0" text="Информация">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="infoStrahLabel" layoutX="20.0" layoutY="232.0" prefHeight="188.0" prefWidth="676.0" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Button fx:id="dataPaneButton" layoutX="320.0" layoutY="277.0" minHeight="10.0" mnemonicParsing="false" opacity="0.0" prefHeight="27.0" prefWidth="315.0" text="Button" />
+      <Button fx:id="strahPaneButton" layoutX="320.0" layoutY="187.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="177.0" text="Button" />
+      <Button fx:id="dogovorPaneButton" layoutX="320.0" layoutY="229.0" mnemonicParsing="false" opacity="0.0" prefHeight="30.0" prefWidth="135.0" text="Button" />
+      <Line endY="420.0" layoutX="260.0" layoutY="120.0" stroke="RED" />
+      <AnchorPane fx:id="contactsPane" layoutX="262.0" layoutY="120.0" prefHeight="421.0" prefWidth="696.0" visible="false">
+         <children>
+            <Label fx:id="contactsLabel" alignment="TOP_LEFT" layoutX="14.0" prefHeight="423.0" prefWidth="682.0" text="Label">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pressPane" layoutX="260.0" layoutY="119.0" prefHeight="420.0" prefWidth="696.0" visible="false">
+         <children>
+            <Label layoutX="228.0" prefHeight="31.0" prefWidth="212.0" text="Тех-поддержка">
+               <font>
+                  <Font name="Kurale" size="31.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="textAreaPress" layoutX="26.0" layoutY="106.0" prefHeight="101.0" prefWidth="670.0" promptText="Ваше сообщение..." wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <Label layoutX="26.0" layoutY="50.0" prefHeight="45.0" prefWidth="670.0" text="Если у вас есть какие-то вопросы, вы можете в данном разделе написать в нашу службу поддержки и наши администраторы в ближайшее время вам ответят!" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="enterPressButton" layoutX="126.0" layoutY="225.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="416.0" text="Отправить">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="answerPressLabel" layoutX="43.0" layoutY="265.0" prefHeight="150.0" prefWidth="652.0" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="adminAnswersText" editable="false" layoutX="26.0" layoutY="272.0" prefHeight="150.0" prefWidth="670.0" promptText="Ответы администрации" wrapText="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="vakansiiPane" layoutX="260.0" layoutY="120.0" prefHeight="421.0" prefWidth="696.0" visible="false">
+         <children>
+            <Label layoutX="31.0" layoutY="1.0" text="Вы можете отправить резюме на электронную почту: filinovich.business@bsuir.by">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="37.0" text="Список вакансий">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="listVakanciiText" editable="false" layoutX="17.0" layoutY="67.0" prefHeight="356.0" prefWidth="682.0" wrapText="true" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="aboutPane" layoutX="260.0" layoutY="120.0" prefHeight="420.0" prefWidth="696.0" visible="false">
+         <children>
+            <Label fx:id="aboutCompanyLabel" alignment="TOP_LEFT" layoutX="14.0" prefHeight="423.0" prefWidth="682.0" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

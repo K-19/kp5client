@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kursach.controllers.AnswerTheQuestionsController">
+    <children>
+        <ImageView fx:id="logo" fitHeight="80.0" fitWidth="91.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../resource/logo.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="enterButton" layoutX="221.0" layoutY="468.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="373.0" style="-fx-background-color: #ffa02c;" text="Отправить ответ">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Label fx:id="supportText" layoutX="30.0" layoutY="524.0" prefHeight="48.0" prefWidth="564.0" text="С вопросами и пожеланиями по функционированию приложения обращаться по адресу: sergeifilinovich01@mail.ru" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelNameCompany" layoutX="123.0" layoutY="30.0" text="   ">
+            <font>
+                <Font name="Kurale" size="30.0" />
+            </font>
+        </Label>
+        <Button fx:id="cancelButton" layoutX="488.0" layoutY="23.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #ffa02c;" text="Отмена">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Label fx:id="namePageLabel" alignment="CENTER" layoutX="386.0" layoutY="21.0" prefHeight="36.0" prefWidth="102.0" text="Вопрос" wrapText="true">
+            <font>
+                <Font name="Kurale" size="21.0" />
+            </font>
+        </Label>
+        <Button fx:id="deleteButton" layoutX="30.0" layoutY="468.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="176.0" style="-fx-background-color: #ff4f4f;" text="Удалить">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+      <TextArea fx:id="textUserArea" editable="false" layoutX="30.0" layoutY="143.0" prefHeight="132.0" prefWidth="564.0" wrapText="true" />
+      <Label fx:id="idUserLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="34.0" layoutY="107.0" prefHeight="30.0" prefWidth="564.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="256.0" layoutY="286.0" text="Ваш ответ:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="textAnswerArea" layoutX="30.0" layoutY="322.0" prefHeight="132.0" prefWidth="564.0" wrapText="true" />
+    </children>
+</AnchorPane>
